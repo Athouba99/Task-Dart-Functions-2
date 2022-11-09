@@ -4,7 +4,7 @@
  * - that prints your name on the screen.
  */
 void name() {
-  print("Athoub BUtaiban");
+  print("Athoub Butaiban");
 }
 
 /**
@@ -15,8 +15,9 @@ void name() {
  * - Age = current year - birth
  */
 void printAge(int birth) {
-  int age;
-  age = 2022 - birth;
+  // birth will be enterd in main in the func call
+  int age; // def age type
+  age = 2022 - birth; // caluculation
   print(age);
 }
 
@@ -31,27 +32,15 @@ void printAge(int birth) {
  * -- tr: it should print `Merhaba NAME`
  */
 void printHello(String name, String language) {
-  // //String en, es, fr, tr;
-  // en = "Hello NAME";
-  // if (language == "en") {
-  //   print("Hello $name");
-  // } else if (language == es) {
-  //   es = "Hola NAME";
-  //   print("Hola $name");
-  // } else if (language == fr) {
-  //   fr = "Bonjour NAME";
-  //   print("Bonjour $name");
-  // } else {
-  //   tr = "Merhaba NAME";
-  //   print("Merhaba $name");
-  // }
-
+  // 2 arguments will be interd in the main in func call
   if (language == "en") {
-    print("hello $name");
+    // if statments
+    print(
+        "Hello $name"); // pass string interpulation to be filled in the main when the func is being called
   } else if (language == "es") {
-    print("hola $name");
+    print("Hola $name");
   } else if (language == "fr") {
-    print("bonjour $name");
+    print("Bonjour $name");
   } else {
     print("Merhaba $name");
   }
@@ -65,11 +54,22 @@ void printHello(String name, String language) {
  */
 
 void printMax(int a, int b) {
-  print(int);
+  if (a == b) {
+    print("equal numbers");
+  } else if (a > b) {
+    print(a);
+  } else {
+    print(b);
+  }
 }
 
 void main() {
-  name(); // task1
-  printAge(1999); // task2
-  printHello("hello", "en"); // task3
+  // task1
+  name();
+  // task2
+  printAge(1999);
+  // task3
+  printHello("Athoub", "en");
+  //task4
+  printMax(7, 3);
 }
