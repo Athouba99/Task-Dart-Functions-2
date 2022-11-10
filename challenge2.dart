@@ -23,9 +23,9 @@ void greet(String name) {
 bool isOdd(int n) {
   // Your code here
   if (n % 2 != 0) {
-    return (true);
+    return true;
   } else {
-    return (false);
+    return false;
   }
 }
 
@@ -39,11 +39,16 @@ bool isOdd(int n) {
  * oddsSmallerThan(15) -> 7
  */
 
-/*
 int oddsSmallerThan(int n) {
-  // Your code here
-
-} */
+  int sum = 0;
+  for (int i = 1; i < n; i++) {
+    if (isOdd(i)) {
+      // we use the func isOdd to check if i is odd or even insted of (n%2 == 0)
+      sum++;
+    }
+  }
+  return sum;
+}
 
 /**
  * squareOrDouble(n):
@@ -55,25 +60,28 @@ int oddsSmallerThan(int n) {
  * squareOrDouble(16) -> 32
  * squareOrDouble(9) -> 81
  */
-/*
-int squareOrDouble(int n) {
-//Your code here
-if(n % != 0){
-  print( n*n );
-} else{
-  print(n*2);
-}
 
-}*/
+int squareOrDouble(int n) {
+  if (isOdd(n)) {
+    return n * 2;
+  } else {
+    return n * n;
+  }
+  /* other way of solving it/ wirting the condition
+  return isOdd(n) ? n*n : n*2;
+  [after '?' is the ture, afte ':' is the false  ] */
+}
 
 void main() {
   // task1
   greet("Athoub");
 
   // task2
-  isOdd(2);
-  print(isOdd);
+  print(isOdd(11));
 
-  // task3
-  //squareOrDouble(8);
+  //task3
+  print(oddsSmallerThan(7));
+
+  // task4
+  print(squareOrDouble(8));
 }
